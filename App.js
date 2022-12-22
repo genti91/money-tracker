@@ -43,13 +43,19 @@ function Home() {
     <View style={Appstyles.frame}>
 
 
+
+
+
+
 <View style={Appstyles.card}>
 <Text style={Appstyles.text} >Money spent today:</Text>
       <TouchableHighlight>
         <View style={Appstyles.boton}>
           <Text style= {{color:'white'}} >view</Text>
         </View>
+      
       </TouchableHighlight>
+      <Text style={Appstyles.ammount} >$540</Text>
     </View>
 
 
@@ -62,6 +68,7 @@ function Home() {
           
           </View>
       </TouchableHighlight>
+      <Text style={Appstyles.ammount} >$2450</Text>
     </View>
 
     <View style={Appstyles.card3}>
@@ -72,17 +79,34 @@ function Home() {
           <Text style= {{color:'white'}} >view</Text>
           
           </View>
+          
       </TouchableHighlight>
+      <Text style={Appstyles.ammount} >$12850</Text>
     </View>
 
 
+<View style={Appstyles.addcont}> 
+    <TouchableHighlight>
+        <View style={Appstyles.add}>
 
-
+          <Text style={Appstyles.textadd} >+ Add spending</Text>
+          
+          </View>
+          </TouchableHighlight>
      
     </View>
+
+
+
+
+
+</View>
+
+    
     </View>
 
 );
+
 }
 
 function MiWea (){
@@ -92,7 +116,9 @@ function MiWea (){
   const hideDialog = () => setVisible(false);
 
   return(
-    <View>
+    <View style={Appstyles.container}>
+    <View style={Appstyles.frame}>
+    <Edit/>
       <Text>hola</Text>
       <Button onPress={() => setVisible(true)}>View</Button>
       <Portal>
@@ -107,5 +133,16 @@ function MiWea (){
       </Dialog>
     </Portal>
     </View>
+    </View>
   )
 }
+
+function Edit (){
+  return(
+    <View>
+      <Text style={Appstyles.text}>hola</Text>
+    </View>
+    
+  )
+}
+
