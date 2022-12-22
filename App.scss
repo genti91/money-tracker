@@ -2,6 +2,11 @@
   background-color: #1c1c1c;
   height: 100%;
   width: 100%;
+
+.text{
+ 
+  color: #ffffff;
+
 }
 
 .frame {
@@ -48,4 +53,29 @@
     flex-wrap: nowrap;
     gap: 10;
     border-radius: 29px;
+  }
+
+  .card2 {
+    position: absolute;
+    top: 26%;
+    left: 5%;
+    width: 90%;
+    height: 12%;
+    background-color: #1c1c1c;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 5%;
+  }
+
+
+  .card3 {
+    position: absolute;
+    top: 42%;
+    left: 5%;
+    width: 90%;
+    height: 12%;
+    background-color: #1c1c1c;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 5%;
   }

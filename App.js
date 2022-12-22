@@ -33,8 +33,9 @@ function Home() {
     <View style={Appstyles.container}>
     <View style={Appstyles.frame}>
 
-    <View style={Appstyles.card}>
-      <Text style= {{color:'white'}}>amongus</Text>
+
+<View style={Appstyles.card}>
+<Text style={Appstyles.text} >Money spent today:</Text>
       <TouchableHighlight>
         <View style={Appstyles.boton}>
           <Text style= {{color:'white'}} >view</Text>
@@ -42,6 +43,33 @@ function Home() {
       </TouchableHighlight>
     </View>
 
+
+    <View style={Appstyles.card2}>
+<Text style={Appstyles.text} >Money spent this week:</Text>
+      <TouchableHighlight>
+        <View style={Appstyles.boton}>
+
+          <Text style= {{color:'white'}} >view</Text>
+          
+          </View>
+      </TouchableHighlight>
+    </View>
+
+    <View style={Appstyles.card3}>
+<Text style={Appstyles.text} >Money spent this month:</Text>
+      <TouchableHighlight>
+        <View style={Appstyles.boton}>
+
+          <Text style= {{color:'white'}} >view</Text>
+          
+          </View>
+      </TouchableHighlight>
+    </View>
+
+
+
+
+     
     </View>
     </View>
 
