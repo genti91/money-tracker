@@ -19,7 +19,7 @@ export default function App() {
     <PaperProvider>
     <NavigationContainer>
       <StatusBar backgroundColor='#000000' barStyle='light-content'/>
-    <Drawer.Navigator initialRouteName='Home' drawerContent={(props) => <CustomDrawer {...props} />} screenOptions={
+    <Drawer.Navigator initialRouteName='MiWea' drawerContent={(props) => <CustomDrawer {...props} />} screenOptions={
       {drawerStyle: { backgroundColor: '#212121', width: 195 },
       headerStyle: { height:65, backgroundColor: '#1c1c1c' },
       header: ({ navigation, route, options }) => {
@@ -122,15 +122,30 @@ function MiWea (){
       <Text>hola</Text>
       <Button onPress={() => setVisible(true)}>View</Button>
       <Portal>
-      <Dialog style={Appstyles.dialog} visible={visible} onDismiss={hideDialog}>
+        
+      <Dialog style={Appstyles.dialog}  visible={visible} onDismiss={hideDialog}>
+      <View style={Appstyles.dialog}>
           <TouchableWithoutFeedback onPress={hideDialog}>
             <View style={Appstyles.menu}>
               <MaterialCommunityIcons name="menu" color={'#fff'} size={30}/>
             </View>
           </TouchableWithoutFeedback>
           <Button onPress={() => console.log('Ok')}>Ok</Button>
-        
+          
+          </View>
       </Dialog>
+      
+     
+      <View style={Appstyles.buttons}>
+
+        <TouchableHighlight>
+        
+      <Text>sussy</Text>
+      
+      </TouchableHighlight>
+      </View>
+      
+     
     </Portal>
     </View>
     </View>
