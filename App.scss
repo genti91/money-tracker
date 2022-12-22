@@ -1,14 +1,47 @@
 
 
 .frame {
-    width: 390px;
-    height: 1087px;
+    position: absolute;
+    top:10%;
+    width: 100%;
+    height: 700px;
     background-color: #000000;
     overflow: hidden;
     border-radius: 34px;
-    justify-content: center;
+    
   }
 
   .text{
     color: bisque;
+  }
+
+  .card {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    height: 12%;
+    background-color: #1c1c1c;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 5%;
+  }
+
+  .boton {
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    width: 93px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #3d3d3d;
+    overflow: hidden;
+    padding: 0px 0px 0px 0px;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 10;
+    border-radius: 29px;
   }

@@ -1,13 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import { Text, View, Button,TouchableHighlight } from 'react-native';
 import Appstyles from './App.scss';
 
 export default function App() {
   console.log("styles: ",Appstyles);
   return (
     <View style={Appstyles.frame}>
-      <Text style={Appstyles.text}>sussy</Text>
-      <StatusBar style="auto" />
+
+<View style={Appstyles.card}>
+<Text>amongus</Text>
+      <TouchableHighlight>
+        <View style={Appstyles.boton}>
+
+          <Text style= {{color:'white'}} >view</Text>
+          
+          </View>
+      </TouchableHighlight>
     </View>
+
+      
+
+      
+    </View>
+
+
+
   );
 }
