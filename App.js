@@ -125,7 +125,7 @@ function MiWea (){
       <Dialog style={Appstyles.dialog} visible={visible} onDismiss={hideDialog}>
           <TouchableWithoutFeedback onPress={hideDialog}>
             <View style={Appstyles.menu}>
-              <MaterialCommunityIcons name="!" color={'#fff'} size={30}/>
+              <MaterialCommunityIcons name="menu" color={'#fff'} size={30}/>
             </View>
           </TouchableWithoutFeedback>
           <Button onPress={() => console.log('Ok')}>Ok</Button>
