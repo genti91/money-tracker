@@ -5,8 +5,8 @@ import Appstyles from './App.scss';
 export default function App() {
   console.log("styles: ",Appstyles);
   return (
-    <View style={Appstyles.container}>
-      <Text>Open up App.js to start workin on your app!</Text>
+    <View style={Appstyles.frame}>
+      <Text style={Appstyles.text}>sussy</Text>
       <StatusBar style="auto" />
     </View>
   );

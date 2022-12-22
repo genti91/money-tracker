@@ -1,7 +1,14 @@
-.container {
-    display: flex;
-    flex: 1;
+
+
+.frame {
+    width: 390px;
+    height: 1087px;
+    background-color: #000000;
+    overflow: hidden;
+    border-radius: 34px;
     justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 112, 112);
-}
+  }
+
+  .text{
+    color: bisque;
+  }
