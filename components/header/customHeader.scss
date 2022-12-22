@@ -1,0 +1,29 @@
+.headerContainer{
+    flex-direction: row;
+    padding: 15px;
+}
+
+.title{
+    color: #ffffff;
+    font-size: 25px;
+    margin-left: 195px;
+    letter-spacing: 0px;
+}
+
+.burger{
+    margin-top: 9px;
+    margin-left: 15px;
+    width: 24px;
+    height: 18px;
+    overflow: visible;
+}
+.space{
+    width: 100%;
+    height: 6px;
+}
+.barr{
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    overflow: hidden;
+}
