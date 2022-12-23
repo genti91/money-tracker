@@ -1,24 +1,48 @@
-import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
-import { View, Button, Text, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, TouchableHighlight, Image, ImageBackground } from 'react-native';
 import styles from './customDrawer.scss';
+import { Avatar } from 'react-native-paper';
   
 export default function CustomDrawer({ navigation }) {
   return (
-      <View >
-    <Button
-      title="Home"
-      onPress={() => {
-        // Navigate using the `navigation` prop that you received
-        navigation.navigate('Home');
-      }}
-    />
-    <Button
-      title="MiWea"
-      onPress={() => {
-        // Navigate using the `navigation` prop that you received
-        navigation.navigate('MiWea');
-      }}
-    />
+    <View style={styles.container}>
+      {/* <View style={styles.avatar}>
+        <ImageBackground source={require('../../assets/avatar.jpg')} resizeMode="cover" style={styles.image}>
+
+        </ImageBackground>
+      </View> */}
+      <Avatar.Image size={70} source={require('../../assets/avatar.jpg')} />
+      <Text style={styles.username}>Username</Text>
+
+      <View style={styles.routes}>
+        <TouchableHighlight onPress={() => {navigation.navigate('Mi Wea')}} underlayColor='#212121'>
+          <View style={styles.button}>
+            <Image source={require('../../assets/chart.png')} style={styles.icon}/>
+            <Text style={styles.text}>Mi Wea</Text>
+          </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight onPress={() => {navigation.navigate('Settings')}} underlayColor='#212121'>
+          <View style={styles.button}>
+            <Image source={require('../../assets/settings.png')} style={styles.icon}/>
+            <Text style={styles.text}>Settings</Text>
+          </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight onPress={() => {navigation.navigate('Settings')}} underlayColor='#212121'>
+          <View style={styles.button}>
+            <Image source={require('../../assets/help.png')} style={styles.icon}/>
+            <Text style={styles.text}>Help</Text>
+          </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight onPress={() => {navigation.navigate('Settings')}} underlayColor='#212121'>
+          <View style={styles.button}>
+            <Image source={require('../../assets/sign_out.png')} style={styles.icon}/>
+            <Text style={styles.text}>Sign out</Text>
+          </View>
+        </TouchableHighlight>
+
+      </View>
     </View>
   );
 }
