@@ -1,4 +1,4 @@
-import { Text, View, TouchableHighlight, StatusBar, TouchableWithoutFeedback, Image } from 'react-native';
+import { Text, View, TouchableHighlight, StatusBar, TouchableWithoutFeedback, Image, TextInput } from 'react-native';
 import styles from './dialog.scss';
 import * as React from 'react';
 import { Button, Portal, IconButton, Colors } from 'react-native-paper';
@@ -33,11 +33,47 @@ export default function Dialog ({visible, showView, setVisible, setShowView}){
         <View style={styles.dialogContainer}>
 
           <View style={styles.dialog}>
-            <Text>hola</Text>
+            <View style={styles.textContainer}>
+              <Text  style={styles.new_spending}> New spending</Text>
+            </View>
+            <View style={styles.price}>
+            <TextInput style={styles.input} placeholder="Price" placeholderTextColor="#fff" keyboardType="numeric" />
+            </View>
+
+            <View style={styles.itemname}>
+            <TextInput style={styles.input} placeholder=" What did you buy?" placeholderTextColor="#fff" />
+</View>
+
+<View style={styles.iconContainer}>
+
+  
+<View style={styles.foodicon}>
+
+<Image source={require('../../assets/comida.png')} style={styles.icon}/>
+</View>
+
+<View style={styles.gasicon}>
+
+<Image source={require('../../assets/nafta.png')} style={styles.icon2}/>
+</View>
+
+<View style={styles._icon}>
+
+
+</View>
+
+<View style={styles.plusicon}>
+
+
+</View>
+
+
+</View>
+
             
           </View>
           
-          <View style={styles.botCont}>
+          <View style={{...styles.botCont}}>
 
             <TouchableHighlight onPress={hideDialog} style={styles.touchable}>
               <View style={styles.cancelar}>

@@ -9,10 +9,11 @@
 .botCont{
     flex-direction: row;
     margin-top: 20px;
+    margin-right: 10px;
 }
   
 .cancelar{
-    margin-right: 10px;
+    margin-right: 200px;
     justify-content: center;
     align-items: center;
     width: 56px;
@@ -44,8 +45,9 @@
 }
 
 .dialog{
+    align-items: center;
     width: 302px;
-    height: 305px;
+    height: 38%;
     background-color: #1a1a1a;
     overflow: hidden;
     border-radius: 30px;
@@ -55,4 +57,119 @@
     width: 56px;
     height: 56px;
     border-radius: 28px;
+}
+
+
+.price {
+    margin-top: 7%;
+    align-items: center;
+    width: 248px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #404040;
+    overflow: hidden;
+    padding: 0px 0px 0px 0px;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 10;
+    border-radius: 28px;
+}
+
+
+.itemname{
+    margin-top: 4%;
+    width: 248px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #404040;
+    overflow: hidden;
+    padding: 0px 0px 0px 0px;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 10;
+    border-radius: 28px;
+}
+
+.textContainer{
+    align-items: center;
+    margin-top: 7%;
+}
+
+.new_spending {
+    align-items: center;
+color: aliceblue;
+
+}
+
+
+.foodicon{
+    margin-right: 5%;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    background-color: #404040;
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+.gasicon{
+    margin-right: 5%;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    background-color: #404040;
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+._icon{
+    margin-right: 5%;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    background-color: #404040;
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+.plusicon{
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    background-color: #404040;
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+.iconContainer{
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+
+
+.icon{
+
+
+    width: 45px;
+    height: 45px;
+
+}
+
+.icon2{
+
+
+    width: 30px;
+    height: 30px;
+
 }
