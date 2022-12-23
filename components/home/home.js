@@ -1,6 +1,6 @@
 import { Text, View, TouchableHighlight } from 'react-native';
 import styles from './home.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Dialog from '../dialog/dialog';
 import ViewDialog from '../viewDialog/viewDialog';
 import { Button } from 'react-native-paper';
@@ -9,22 +9,55 @@ import { Button } from 'react-native-paper';
 export default function Home() {
   
     const [visible, setVisible] = useState(false);
-    const [showView, setShowView] = useState(visible);
     const [visibleView, setVisibleView] = useState(false);
-    const [showViewView, setShowViewView] = useState(visibleView);
+    const [money, setMoney] = useState([
+      { price: "850", name: "gas", type: "gas", date: "5 23/12/2022 12:50:11"},
+      { price: "345", name: "Coca", type: "food", date: "3 21/12/2022 12:34:14"},
+      { price: "154", name: "algo", type: "plus", date: "2 20/12/2022 17:54:10"},
+      { price: "250", name: "papas", type: "food", date: "6 17/12/2022 16:25:46"},
+      { price: "250", name: "papas", type: "food", date: "5 16/12/2022 10:22:37"},
+      { price: "2000", name: "burgir", type: "food", date: "3 16/11/2022 10:22:37"},
+      { price: "10000", name: "burgir", type: "food", date: "3 16/11/2021 10:22:37"},
+    ])
+
+    const[today, setToday] = useState({total:0, data:[]})
+    const[week, setWeek] = useState({total:0, data:[]})
+    const[month, setMonth] = useState({total:0, data:[]})
+
+    useEffect(() => {
+      let year = new Date().getFullYear()
+      let monthToday = new Date().getMonth() + 1
+      let dateToday = new Date().getDate()
+      let dayToday = new Date().getDay()
+      if (dayToday == 0) {dayToday = 7}
+      dateToday -= dayToday
+      let thisYear = money.filter((e) =>  e.date.slice(8,12) == year)
+      setMonth({...month, data: thisYear.filter((e) =>  e.date.slice(5,7) == monthToday)})
+      setWeek({...week, data: month.data.filter((e) =>  e.date.slice(2,4) > dateToday)})
+      setToday({...today, data: month.data.filter((e) =>  e.date.slice(2,4) == new Date().getDate())})
+      let todayTotal = 0
+      today.data.forEach((e) => {todayTotal += Number(e.price)})
+      setToday({...today, total: todayTotal})
+      let weekTotal = 0
+      week.data.forEach((e) => {weekTotal += Number(e.price)})
+      setWeek({...week, total: weekTotal})
+      let monthTotal = 0
+      month.data.forEach((e) => {monthTotal += Number(e.price)})
+      setMonth({...month, total: monthTotal})
+    },[money])
   
     return (
       <View style={styles.container}>
       <View style={styles.frame}>
   
-        <Dialog visible={visible} setVisible={setVisible} showView={showView} setShowView={setShowView}/>
-        <ViewDialog visibleView={visibleView} setVisibleView={setVisibleView} showViewView={showViewView} setShowViewView={setShowViewView} />
+        <Dialog visible={visible} setVisible={setVisible} money={money} setMoney={setMoney}/>
+        <ViewDialog visibleView={visibleView} setVisibleView={setVisibleView} />
         
         <View style={styles.card}>
           <Text style={styles.text} >Money spent today:</Text>
           <View style={styles.cardBotonContainer} >
-            <Text style={styles.ammount} >$540</Text>
-            <TouchableHighlight style={styles.boton} onPress={() => {setVisibleView(true); setShowViewView(true)}}>
+            <Text style={styles.ammount} >${today.total}</Text>
+            <TouchableHighlight style={styles.boton} onPress={() => {setVisibleView(true)}}>
                 <Text style= {{color:'white'}} >view</Text>
             </TouchableHighlight>
           </View>
@@ -33,8 +66,8 @@ export default function Home() {
         <View style={styles.card2}>
           <Text style={styles.text} >Money spent this week:</Text>
           <View style={styles.cardBotonContainer}>
-            <Text style={styles.ammount} >$2450</Text>
-            <TouchableHighlight style={styles.boton} onPress={() => {setVisibleView(true); setShowViewView(true)}}>
+            <Text style={styles.ammount} >${week.total}</Text>
+            <TouchableHighlight style={styles.boton} onPress={() => {setVisibleView(true)}}>
                 <Text style= {{color:'white'}} >view</Text>
             </TouchableHighlight>
           </View>
@@ -43,15 +76,15 @@ export default function Home() {
         <View style={styles.card3}>
           <Text style={styles.text} >Money spent this month:</Text>
           <View style={styles.cardBotonContainer}>
-            <Text style={styles.ammount} >$12850</Text>
-            <TouchableHighlight style={styles.boton} onPress={() => {setVisibleView(true); setShowViewView(true)}}>
+            <Text style={styles.ammount} >${month.total}</Text>
+            <TouchableHighlight style={styles.boton} onPress={() => {setVisibleView(true)}}>
                 <Text style= {{color:'white'}} >view</Text>
             </TouchableHighlight>
           </View>  
         </View>
   
         <View style={styles.addcont}> 
-          <TouchableHighlight onPress={() => {setVisible(true); setShowView(true)}}>
+          <TouchableHighlight onPress={() => {setVisible(true)}}>
             <View style={styles.add}>
               <Text style={styles.textadd} >+ Add spending</Text>
             </View>

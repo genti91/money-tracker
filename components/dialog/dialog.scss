@@ -103,8 +103,7 @@
 
 .new_spending {
     align-items: center;
-color: aliceblue;
-
+    color: aliceblue;
 }
 
 
@@ -117,6 +116,8 @@ color: aliceblue;
     background-color: #404040;
     overflow: hidden;
     border-radius: 28px;
+    border-style: solid;
+    border-color: rgb(80, 246, 255);
 }
 
 .gasicon{
@@ -128,6 +129,8 @@ color: aliceblue;
     background-color: #404040;
     overflow: hidden;
     border-radius: 28px;
+    border-style: solid;
+    border-color: rgb(80, 246, 255);
 }
 
 ._icon{
@@ -139,6 +142,8 @@ color: aliceblue;
     background-color: #404040;
     overflow: hidden;
     border-radius: 28px;
+    border-style: solid;
+    border-color: rgb(80, 246, 255);
 }
 
 .plusicon{
@@ -149,6 +154,8 @@ color: aliceblue;
     background-color: #404040;
     overflow: hidden;
     border-radius: 28px;
+    border-style: solid;
+    border-color: rgb(80, 246, 255);
 }
 
 .iconContainer{
@@ -172,4 +179,22 @@ color: aliceblue;
     width: 30px;
     height: 30px;
 
+}
+
+.input{
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+.priceError{
+    color: rgba(255, 0, 0, 0.669);
+    position: absolute;
+    top: 40px
+}
+
+.emptyError{
+    color: rgba(255, 0, 0, 0.669);
+    position: absolute;
+    top: 464px
 }
