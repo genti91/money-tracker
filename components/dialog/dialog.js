@@ -46,11 +46,6 @@ export default function Dialog ({visible, setVisible, money, setMoney}){
     return day+' '+date+'/'+month+'/'+year+' '+hours+':'+min+':'+sec
   }
 
-  React.useEffect(() => {
-    //console.log(getDate());
-  },[spending, error])
-
-
   const [error, setError] = React.useState({
     price: false,
     empty: false,
@@ -69,12 +64,15 @@ export default function Dialog ({visible, setVisible, money, setMoney}){
       return;
     }
     let date = getDate()
-    console.log(date)
-    setSpending({...spending, date: date})
-    console.log('spening', spending)
-
-    hideDialog()
+    setSpending((prevSpend) => {return{...prevSpend, date: date}})
   }
+
+  React.useEffect(() => {
+    if (!spending.date) return;
+    setMoney([...money, spending])
+    console.log(money)
+    hideDialog()
+  },[spending])
   
   return(
 

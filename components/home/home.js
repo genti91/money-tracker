@@ -11,7 +11,7 @@ export default function Home() {
     const [visible, setVisible] = useState(false);
     const [visibleView, setVisibleView] = useState(false);
     const [money, setMoney] = useState([
-      { price: "850", name: "gas", type: "gas", date: "5 23/12/2022 12:50:11"},
+      { price: "850", name: "gas", type: "gas", date: "6 24/12/2022 12:50:11"},
       { price: "345", name: "Coca", type: "food", date: "3 21/12/2022 12:34:14"},
       { price: "154", name: "algo", type: "plus", date: "2 20/12/2022 17:54:10"},
       { price: "250", name: "papas", type: "food", date: "6 17/12/2022 16:25:46"},
@@ -32,18 +32,18 @@ export default function Home() {
       if (dayToday == 0) {dayToday = 7}
       dateToday -= dayToday
       let thisYear = money.filter((e) =>  e.date.slice(8,12) == year)
-      setMonth({...month, data: thisYear.filter((e) =>  e.date.slice(5,7) == monthToday)})
-      setWeek({...week, data: month.data.filter((e) =>  e.date.slice(2,4) > dateToday)})
-      setToday({...today, data: month.data.filter((e) =>  e.date.slice(2,4) == new Date().getDate())})
+      let monthData = thisYear.filter((e) =>  e.date.slice(5,7) == monthToday)
+      let weekData = monthData.filter((e) =>  e.date.slice(2,4) > dateToday)
+      let todayData = monthData.filter((e) =>  e.date.slice(2,4) == new Date().getDate())
       let todayTotal = 0
-      today.data.forEach((e) => {todayTotal += Number(e.price)})
-      setToday({...today, total: todayTotal})
+      todayData.forEach((e) => {todayTotal += Number(e.price)})
+      setToday({total: todayTotal, data: todayData})
       let weekTotal = 0
-      week.data.forEach((e) => {weekTotal += Number(e.price)})
-      setWeek({...week, total: weekTotal})
+      weekData.forEach((e) => {weekTotal += Number(e.price)})
+      setWeek({total: weekTotal, data: weekData})
       let monthTotal = 0
-      month.data.forEach((e) => {monthTotal += Number(e.price)})
-      setMonth({...month, total: monthTotal})
+      monthData.forEach((e) => {monthTotal += Number(e.price)})
+      setMonth({total: monthTotal, data: monthData})
     },[money])
   
     return (
