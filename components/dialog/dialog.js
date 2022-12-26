@@ -3,6 +3,7 @@ import styles from './dialog.scss';
 import * as React from 'react';
 import { Button, Portal, IconButton, Colors } from 'react-native-paper';
 import * as Animatable from 'react-native-animatable';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Dialog ({visible, setVisible, money, setMoney}){
 
@@ -67,11 +68,19 @@ export default function Dialog ({visible, setVisible, money, setMoney}){
     setSpending((prevSpend) => {return{...prevSpend, date: date}})
   }
 
+  const loadMoney = async () => {
+    try{
+      await AsyncStorage.setItem('spendings', JSON.stringify([...money, spending]))
+      setMoney([...money, spending])
+      hideDialog()
+    }catch(e){
+      console.log(e)
+    }
+  }
+
   React.useEffect(() => {
     if (!spending.date) return;
-    setMoney([...money, spending])
-    console.log(money)
-    hideDialog()
+    loadMoney()
   },[spending])
   
   return(

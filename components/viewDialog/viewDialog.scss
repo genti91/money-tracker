@@ -16,9 +16,8 @@
     margin-right: 200px;
     justify-content: center;
     align-items: center;
-    width: 56px;
-    height: 56px;
-    background-color: #404040;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     border-radius: 28px;
 }
@@ -38,9 +37,13 @@
 }
 
 .touchable{
-    width: 56px;
-    height: 56px;
+    position: absolute;
+    right: 0;
+    width: 36px;
+    height: 36px;
     border-radius: 28px;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 .title{
@@ -53,4 +56,34 @@
     color: #00ff3C;
     font-size: 25px;
     margin-top: 5px;
+}
+
+.list{
+    margin-top: 15px;
+    width: 100%;
+    max-height: 100%;
+    // border: solid;
+    // border-top-width: 1.3px;
+    // border-bottom-width: 1.3px;
+}
+
+.item{
+    width: 100%;
+    height: 56px;
+    border: solid;
+    border-width: 1.3px;
+    padding: 10px;
+    padding-left: 50px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+}
+
+.itemText{
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.space{
+    width: 100%;
+    height: 10%
 }
