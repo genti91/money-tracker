@@ -1,4 +1,4 @@
-import { Text, View, TouchableHighlight, StatusBar, TouchableWithoutFeedback, Image, TextInput } from 'react-native';
+import { Text, View, TouchableHighlight, StatusBar, TouchableWithoutFeedback, Image, TextInput, Keyboard } from 'react-native';
 import styles from './dialog.scss';
 import * as React from 'react';
 import { Button, Portal, IconButton, Colors } from 'react-native-paper';
@@ -89,6 +89,7 @@ export default function Dialog ({visible, setVisible, money, setMoney}){
         <Animatable.View ref={viewAnimation}>
 
         {showView && (
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.dialogContainer}>
 
           <View style={styles.dialog}>
@@ -155,6 +156,7 @@ export default function Dialog ({visible, setVisible, money, setMoney}){
           </View>
 
         </View>
+        </TouchableWithoutFeedback>
         )}
 
         </Animatable.View>
