@@ -59,6 +59,7 @@ export default function Dialog ({visible, setVisible, money, setMoney}){
     }
   }
   const submitSpending = async () => {
+    Keyboard.dismiss();
     if (error.price) return;
     if (!spending.price || !spending.name || !spending.type) {
       setError({...error, empty: true});
