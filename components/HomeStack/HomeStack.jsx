@@ -1,4 +1,5 @@
 import { createStackNavigator } from '@react-navigation/stack';
+import DetailTabs from '../DetailTabs/detailTabs';
 import Home from '../home/home';
 import MonthDetails from '../monthDetails/monthDetails';
 import CustomStackHeader from '../stackHeader/stackHeader';
@@ -26,7 +27,7 @@ export default function HomeStack({route}) {
         }
     }>
         <Stack.Screen name="Home" component={Home} initialParams={{ setVisible: setVisible }} />
-        <Stack.Screen name="Detail" component={MonthDetails} />
+        <Stack.Screen name="Detail" component={DetailTabs} />
     </Stack.Navigator>
   );
 }
