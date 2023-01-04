@@ -1,8 +1,10 @@
-import { View, Text, FlatList } from "react-native";
+import { useRef } from "react";
+import { View, Text, FlatList, TouchableHighlight } from "react-native";
 import styles from './monthDetails.scss';
 
 export default function MonthDetails ({navigation, route}){
 
+    const flatList = useRef(null);
 
     return(
         <View style={styles.container}>
@@ -40,31 +42,21 @@ export default function MonthDetails ({navigation, route}){
                 </View>
               )}}
               keyExtractor={item => item.date}
+              ref={flatList}
             />
 
             <View style={styles.dateContainer}>
-                <View style={styles.circulo}>
-                    <Text style={styles.fecha}>S</Text>
-                </View>
-                <View style={styles.circulo}>
-                    <Text style={styles.fecha}>M</Text>
-                </View>
-                <View style={styles.circulo}>
-                    <Text style={styles.fecha}>T</Text>
-                </View>
-                <View style={styles.circulo}>
-                    <Text style={styles.fecha}>W</Text>
-                </View>
-                <View style={styles.circulo}>
-                    <Text style={styles.fecha}>T</Text>
-                </View>
-                <View style={styles.circulo}>
-                    <Text style={styles.fecha}>F</Text>
-                </View>
-                <View style={styles.circulo}>
-                    <Text style={styles.fecha}>S</Text>
-                </View>
-            </View>
+                {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((item, index) => {
+                    return (
+                        <TouchableHighlight key={index} onPress={() => {flatList.current.scrollToIndex({index: index})}}>
+                            <View style={styles.circulo}>
+                                <Text style={styles.fecha}>{item}</Text>
+                            </View>
+                        </TouchableHighlight>
+                        )
+                })}
+            </View> 
+               
 
             </View> 
 
@@ -81,6 +73,39 @@ export default function MonthDetails ({navigation, route}){
 
 
 const data = [
+    {
+        total: 3423,
+        data:[{ price: "850", name: "gas", type: "gas", date: "6 24/12/2022 12:50:11"},
+                { price: "345", name: "Coca", type: "food", date: "3 21/12/2022 12:34:14"},
+                { price: "154", name: "algo", type: "plus", date: "2 20/12/2022 17:54:10"},
+                { price: "250", name: "papas", type: "food", date: "6 17/12/2022 16:25:46"},
+            ]
+    },
+    {
+        total: 3423,
+        data:[{ price: "850", name: "gas", type: "gas", date: "6 24/12/2022 12:50:11"},
+                { price: "345", name: "Coca", type: "food", date: "3 21/12/2022 12:34:14"},
+                { price: "154", name: "algo", type: "plus", date: "2 20/12/2022 17:54:10"},
+                { price: "250", name: "papas", type: "food", date: "6 17/12/2022 16:25:46"},
+                { price: "345", name: "Coca", type: "food", date: "3 21/12/2022 12:34:14"},
+            ]
+    },
+    {
+        total: 3423,
+        data:[{ price: "850", name: "gas", type: "gas", date: "6 24/12/2022 12:50:11"},
+                { price: "345", name: "Coca", type: "food", date: "3 21/12/2022 12:34:14"},
+                { price: "154", name: "algo", type: "plus", date: "2 20/12/2022 17:54:10"},
+                { price: "250", name: "papas", type: "food", date: "6 17/12/2022 16:25:46"},
+            ]
+    },
+    {
+        total: 3423,
+        data:[{ price: "850", name: "gas", type: "gas", date: "6 24/12/2022 12:50:11"},
+                { price: "345", name: "Coca", type: "food", date: "3 21/12/2022 12:34:14"},
+                { price: "154", name: "algo", type: "plus", date: "2 20/12/2022 17:54:10"},
+                { price: "250", name: "papas", type: "food", date: "6 17/12/2022 16:25:46"},
+            ]
+    },
     {
         total: 3423,
         data:[{ price: "850", name: "gas", type: "gas", date: "6 24/12/2022 12:50:11"},

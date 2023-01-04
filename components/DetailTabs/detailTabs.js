@@ -27,6 +27,8 @@ export default function DetailTabs() {
             backgroundColor: '#000000',
             height: 59,
             borderTopColor: 'transparent',
+            paddingHorizontal: 40,
+            
         },
         tabBarShowLabel: false,
     })}
