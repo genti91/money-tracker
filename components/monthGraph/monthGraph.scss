@@ -14,4 +14,118 @@
     border-top-left-radius: 34px;
     border-top-right-radius: 34px;
     align-items: center;
+    padding: 20px;
 }
+
+.graphContainer{
+    width: 325px;
+    height: 209px;
+    background-color: #1c1c1c;
+    overflow: hidden;
+    border-radius: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.items {
+    width: 58%;
+    height: 303px;
+    background-color: #1c1c1c;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+
+
+  .monthTarget {
+    width: 37%;
+    height: 304px;
+    background-color: #1c1c1c;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 5%;
+  }
+
+  .total{
+    font-size: 29px;
+    color: white;
+    margin-left: 20px;
+    font-weight: 400;
+  }
+
+
+  .month{
+    margin-left: 2px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+  }
+
+  .linita{
+    
+    padding: 8px;
+    padding-left: 18px;
+    border-bottom-width: 0.2px;
+    border-color: white;
+
+  }
+
+  .target{
+
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+  }
+
+
+  .monthitems{
+    width: 52%;
+    height: 303px;
+    overflow: hidden;
+    margin-left: 5%;
+    margin-top: 1%;
+  }
+
+  .monthammont{
+    position: absolute;
+    top: 13%;
+    left: 55%;
+    width: 52%;
+    height: 303px;
+    overflow: hidden;
+    margin-left: 5%;
+    margin-top: 1%;
+  }
+
+  .sussyitems{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    margin-top: 1%;
+  }
+
+  .targetprice{
+    margin-left: 28px;
+    margin-top: 6px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+  }
+
+  .bottle{
+    width: 52%;
+    height: 203px;
+    overflow: hidden;
+    margin-left: 25%;
+    margin-top: 10%;
+    background-color: #44a5ff;
+    border-radius: 10px;
+  }
+
+  .bottlefilling{
+    width: 100%;
+    overflow: hidden;
+    background-color: #454545;
+  }
