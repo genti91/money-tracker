@@ -11,7 +11,7 @@ This is a React Native app that helps you know how much money you have been spen
 
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/genti91/money-tracker/main/images/home.png?token=GHSAT0AAAAAABWKGXPEO7S2BZXG2GKKEMSWY7HTOPQ)
+![App Screenshot](https://github.com/genti91/money-tracker/blob/main/images/home.png?raw=true)
 
 ![App Screenshot](https://raw.githubusercontent.com/genti91/money-tracker/main/images/home-add-spending.png?token=GHSAT0AAAAAABWKGXPFC6YQGURZ2VR25NQOY7HTQMQ)
 
