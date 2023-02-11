@@ -1,5 +1,5 @@
 
-# money-tracker
+# Money Tracker
 
 This is a React Native app that helps you know how much money you have been spending through the month. It uses all three navigator (Stack, Tab and Drawer), it also has react native svg charts and to store the data it uses async storage.
 
