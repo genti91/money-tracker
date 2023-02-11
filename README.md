@@ -13,12 +13,12 @@ This is a React Native app that helps you know how much money you have been spen
 
 ![App Screenshot](https://github.com/genti91/money-tracker/blob/main/images/home.png?raw=true)
 
-![App Screenshot](https://github.com/genti91/money-tracker/main/images/home-add-spending.png?raw=true)
+![App Screenshot](https://github.com/genti91/money-tracker/blob/main/images/home-add-spending.png?raw=true)
 
-![App Screenshot](https://github.com/genti91/money-tracker/main/images/home-view-today.png?raw=true)
+![App Screenshot](https://github.com/genti91/money-tracker/blob/main/images/home-view-today.png?raw=true)
 
-![App Screenshot](https://github.com/genti91/money-tracker/main/images/details-graph.png?raw=true)
+![App Screenshot](https://github.com/genti91/money-tracker/blob/main/images/details-graph.png?raw=true)
 
-![App Screenshot](https://github.com/genti91/money-tracker/main/images/details.png?raw=true)
+![App Screenshot](https://github.com/genti91/money-tracker/blob/main/images/details.png?raw=true)
 
-![App Screenshot](https://github.com/genti91/money-tracker/main/images/drawer.png?raw=true)
+![App Screenshot](https://github.com/genti91/money-tracker/blob/main/images/drawer.png?raw=true)
