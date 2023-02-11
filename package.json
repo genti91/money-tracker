@@ -7,8 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "reload": "money-slayer-reload.bat",
-    "load": "money-slayer.bat"
+    "reload": "money-app-reload.bat",
+    "load": "money-app.bat"
   },
   "dependencies": {
     "@expo/webpack-config": "^0.17.2",
