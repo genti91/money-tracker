@@ -33,7 +33,7 @@ export default function MonthGraph ({navigation, route}){
                 <View style={{flexDirection: 'row', width: 325}}>
                     <View style={styles.items}>                 
                         <View style={styles.linita}>
-                            <Text style={styles.month}>Cocktober:</Text>
+                            <Text style={styles.month}>October:</Text>
                         </View>
                         
                         <View style={styles.monthitems} >
@@ -42,18 +42,15 @@ export default function MonthGraph ({navigation, route}){
                             <Text style={styles.sussyitems} >Food</Text>
                             <Text style={styles.sussyitems} >Health</Text>
                             <Text style={styles.sussyitems} >House</Text>
-                            <Text style={styles.sussyitems} >sus</Text>
-                            <Text style={styles.sussyitems} >sus</Text>
+
                         </View>
 
                         <View style={styles.monthammont} >
                             <Text style={{...styles.sussyitems, color: randomColor()}}>$43240</Text>
                             <Text style={{...styles.sussyitems, color: randomColor()}}>$1320</Text>
                             <Text style={{...styles.sussyitems, color: randomColor()}}>$950</Text>
-                            <Text style={{...styles.sussyitems, color: randomColor()}}>$40</Text>
-                            <Text style={{...styles.sussyitems, color: randomColor()}}>$420</Text>
+                            <Text style={{...styles.sussyitems, color: randomColor()}}>$430</Text>
                             <Text style={{...styles.sussyitems, color: randomColor()}}>$4356</Text>
-                            <Text style={{...styles.sussyitems, color: randomColor()}}>$43240</Text>
                         </View>
 
 

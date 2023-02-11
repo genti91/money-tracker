@@ -14,10 +14,10 @@ export default function CustomDrawer({ navigation }) {
       <Text style={styles.username}>Username</Text>
 
       <View style={styles.routes}>
-        <TouchableHighlight onPress={() => {navigation.navigate('Mi Wea')}} underlayColor='#212121'>
+        <TouchableHighlight onPress={() => {navigation.navigate('Home')}} underlayColor='#212121'>
           <View style={styles.button}>
             <Image source={require('../../assets/chart.png')} style={styles.icon}/>
-            <Text style={styles.text}>Mi Wea</Text>
+            <Text style={styles.text}>Home</Text>
           </View>
         </TouchableHighlight>
 

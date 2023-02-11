@@ -74,24 +74,22 @@ export default function MonthDetails ({navigation, route}){
 
 const data = [
     {
-        total: 3423,
+        total: 1445,
         data:[{ price: "850", name: "gas", type: "gas", date: "6 24/12/2022 12:50:11"},
                 { price: "345", name: "Coca", type: "food", date: "3 21/12/2022 12:34:14"},
-                { price: "154", name: "algo", type: "plus", date: "2 20/12/2022 17:54:10"},
                 { price: "250", name: "papas", type: "food", date: "6 17/12/2022 16:25:46"},
             ]
     },
     {
-        total: 3423,
+        total: 1790,
         data:[{ price: "850", name: "gas", type: "gas", date: "6 24/12/2022 12:50:11"},
                 { price: "345", name: "Coca", type: "food", date: "3 21/12/2022 12:34:14"},
-                { price: "154", name: "algo", type: "plus", date: "2 20/12/2022 17:54:10"},
                 { price: "250", name: "papas", type: "food", date: "6 17/12/2022 16:25:46"},
                 { price: "345", name: "Coca", type: "food", date: "3 21/12/2022 12:34:14"},
             ]
     },
     {
-        total: 3423,
+        total: 2423,
         data:[{ price: "850", name: "gas", type: "gas", date: "6 24/12/2022 12:50:11"},
                 { price: "345", name: "Coca", type: "food", date: "3 21/12/2022 12:34:14"},
                 { price: "154", name: "algo", type: "plus", date: "2 20/12/2022 17:54:10"},

@@ -21,7 +21,7 @@ export default function App() {
     <PaperProvider>
       <NavigationContainer>
         <StatusBar backgroundColor='#000000' barStyle='light-content'/>
-        <Drawer.Navigator initialRouteName='Mi Wea' drawerContent={(props) => <CustomDrawer {...props} />} screenOptions={
+        <Drawer.Navigator initialRouteName='Home' drawerContent={(props) => <CustomDrawer {...props} />} screenOptions={
           {drawerStyle: { backgroundColor: '#212121', width: 195 },
           headerStyle: { height:65, backgroundColor: '#1c1c1c' },
           header: ({ navigation, route, options }) => {
@@ -30,7 +30,7 @@ export default function App() {
             }
           }
         }>
-          <Drawer.Screen name="Mi Wea" component={HomeStack} initialParams={{ setVisible: setVisible }}/>
+          <Drawer.Screen name="Home" component={HomeStack} initialParams={{ setVisible: setVisible }}/>
           <Drawer.Screen name="Settings" component={Settings} />
         </Drawer.Navigator>
       </NavigationContainer>
