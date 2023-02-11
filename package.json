@@ -1,13 +1,14 @@
 {
-  "name": "money-slayer",
+  "name": "money-tracker",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "money-slayer.bat",
+    "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "reload": "money-slayer-reload.bat"
+    "reload": "money-slayer-reload.bat",
+    "load": "money-slayer.bat"
   },
   "dependencies": {
     "@expo/webpack-config": "^0.17.2",
